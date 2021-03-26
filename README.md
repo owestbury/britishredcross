@@ -17,7 +17,7 @@ Command line:
 		{inserted 5 data records in the mysql database}
 
 3. Command line: New tab:
-	Cd stockopedia
+	Cd stockopedia-app
 		yarn install
 		yarn start
 		

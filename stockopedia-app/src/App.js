@@ -36,8 +36,6 @@ class App extends Component {
             .then(response => response.json())
             .then(response => this.setState({countries: response}))
             .catch(err => console.log(err))
-
-        console.log(this.state);
     }
 
     getLastId = (data) => {
