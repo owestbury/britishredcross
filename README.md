@@ -17,7 +17,7 @@ Command line:
 		{inserted 5 data records in the mysql database}
 
 3. Command line: New tab:
-	Cd client
+	Cd stockopedia
 		yarn install
 		yarn start
 		
@@ -44,7 +44,7 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-cd client
+cd stockopedia
 yarn run test
 
 Launches the test runner in the interactive watch mode.\
