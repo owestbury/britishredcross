@@ -1,0 +1,105 @@
+
+.App {
+  min-height: 100vh;
+  text-align: center;
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 50%;
+  padding-bottom: 10px;
+}
+
+.App-body {
+  width: 60%;
+  margin: 20px auto;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.currency {
+  padding: 10px;
+}
+
+.rt-expandable {
+  cursor: unset !important;
+}
+
+.show-pointer
+{
+  cursor: pointer !important;
+}
+
+.cardDeck {
+  width:50%;
+}
+
+.selectedPlans {
+  justify-content: center;
+}
+
+.btn-group.btn-group-toggle {
+  padding: 10px;
+}
+
+.plansbox {
+  padding:20px;
+  margin: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 4px 0 rgb(0 0 0 / 32%);
+  box-shadow: 0 0 4px 0 rgb(0 0 0 / 32%);
+  -ms-border-radius: 3px;
+}
+
+.selectedPlansTitle {
+  width: 100%;
+  padding: 20px;
+  color: #111;
+  font-weight: bold; letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
+.selected {
+  padding: 10px;
+  justify-content: center;
+}
+.selected img.card-img-top {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+}
+
