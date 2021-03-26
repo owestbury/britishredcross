@@ -1,5 +1,9 @@
-## Document Instruction - make it work on your machine
 
+## Challenge details
+Build a page that shows the available subscription plans to a user and allows them to choose what they’d like to purchase, the billing frequency and calculates the total cost for them.
+URL: https://gist.github.com/Tj-Stockopedia/11338d90eb3444c238b0fcb39a4b4be1
+
+## Document Instruction - make it work on your machine
 In the project directory:
 
 Command line:
