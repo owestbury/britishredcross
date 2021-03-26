@@ -31,11 +31,13 @@ class App extends Component {
     }
 
     getCountries = _ => {
-        const path = process.env.REACT_APP_API_COUNTRIES;
+        const path = 'http://localhost:8080/api/countries';
         fetch(path)
             .then(response => response.json())
             .then(response => this.setState({countries: response}))
             .catch(err => console.log(err))
+
+        console.log(this.state);
     }
 
     getLastId = (data) => {
