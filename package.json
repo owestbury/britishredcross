@@ -1,0 +1,52 @@
+{
+  "name": "stockopedia-app",
+  "version": "1.0.0",
+  "description": "stockopedia challenge nodejs, react, mysql, docker",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "keywords": [
+    "nodejs",
+    "react",
+    "mysql",
+    "docker"
+  ],
+  "author": "westbury",
+  "license": "ISC",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "adminer-node": "^1.0.7",
+    "axios": "^0.21.1",
+    "babel-preset-react-native": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "express-with-json": "^0.0.6",
+    "glob": "^7.1.4",
+    "mysql": "^2.17.1",
+    "mysql2": "^2.2.5",
+    "react-table": "^7.6.3",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.5.1",
+    "ts-node": "^8.3.0",
+    "typeorm": "^0.2.18",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "proxy": {
+    "/api/*": {
+      "target": "http://[::1]:8080"
+    }
+  }
+}
