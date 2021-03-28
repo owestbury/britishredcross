@@ -104,13 +104,13 @@ class App extends Component {
 
         return (
             <div className="App">
-                <header className="App-header" aria-lable={page.title}>
+                <header className="App-header">
                     <h2>
                         {page.title}
                     </h2>
                 </header>
 
-                <h4 data-testid="subscription" aria-lable={page.subscription}>{page.subscription}</h4>
+                <h4 data-testid="subscription">{page.subscription}</h4>
 
                 <div className="currency">
 

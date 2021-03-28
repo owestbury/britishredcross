@@ -60,7 +60,5 @@ BillingCard.propTypes = {
         symbol: PropTypes.string.isRequired,
         rate: PropTypes.number.isRequired,
     }),
-    button: PropTypes.shape({
-        process: PropTypes.string,
-    })
+    button: PropTypes.array
 };

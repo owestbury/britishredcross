@@ -11,12 +11,30 @@ export class ItemCard extends Component {
     constructor(props) {
         super(props);
         this.state = {};
+        this.onBlurHandler = this.onBlurHandler.bind(this);
+        this.onFocusHandler = this.onFocusHandler.bind(this);
     }
 
     setSelValue(val) {
         return {
             subSelect: val
         }
+    }
+
+    onClickHandler() {
+        this.setState(currentState => ({
+            isOpen: !currentState.isOpen
+        }));
+    }
+
+    onBlurHandler() {
+        this.timeOutId = setTimeout(() => {
+            this.setState({isOpen: false});
+        });
+    }
+
+    onFocusHandler() {
+        clearTimeout(this.timeOutId);
     }
 
     render() {
@@ -39,9 +57,11 @@ export class ItemCard extends Component {
                     <Card.Body>
 
                         <Card.Title>{item.name}</Card.Title>
-                        <div className='button'>
+                        <div className='button'
+                             onBlur={this.onBlurHandler}
+                             onFocus={this.onFocusHandler}>
                             {subscription === 1 && val === 'Monthly' ?
-                                <ToggleButtonGroup type="checkbox" onChange={onChange} id='id' value={item}>
+                                <ToggleButtonGroup type="checkbox" onChange={onChange} onClick={this.onClickHandler} id='id' value={item}>
                                     <ToggleButton name='monthly'
                                                   value={0}>{button.monthly} {currency.symbol}{monthly_cost} </ToggleButton>
                                 </ToggleButtonGroup>
@@ -91,5 +111,9 @@ ItemCard.propTypes = {
         symbol: PropTypes.string.isRequired,
         rate: PropTypes.number.isRequired,
     }),
-    button: PropTypes.array
+    button: PropTypes.shape({
+        remove: PropTypes.string,
+        monthly: PropTypes.string,
+        annual: PropTypes.string,
+    })
 };
