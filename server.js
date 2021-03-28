@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// countries routes
+// gallery routes
 
 app.use(cors(corsOptions));
 
@@ -39,22 +39,22 @@ app.use(
 );
 
 app.use(bodyParser.json()); //application json
-require("./api/routes/countries.routes.js")(app);
+require("./api/routes/gallery.routes.js")(app);
 
 // call sysc()
 const db = require("./api/models");
-// db.sequelize.sync({ force: true }).then(() => {
-//     console.log("Drop and re-sync db.");
-// });
-db.sequelize.sync();
+db.sequelize.sync({ force: true }).then(() => {
+    console.log("Drop and re-sync db.");
+});
+// db.sequelize.sync();
 
 // simple route
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to Stockopea node application." });
+    res.json({ message: "Welcome to British Red Cross node application." });
 });
 
-app.get('api/countries', (req, res) =>{
-    res.send('go to /countries to see countries')
+app.get('api/gallery', (req, res) =>{
+    res.send('go to /gallery to see gallery')
 });
 
 app.get('/hey', (req, res) => res.send('ho!'))
@@ -62,5 +62,5 @@ app.get('/hey', (req, res) => res.send('ho!'))
 app.listen()
 
 app.listen(PORT, () => {
-   console.log('Countries server listening on port 8080');
+   console.log('gallery server listening on port 8080');
 });

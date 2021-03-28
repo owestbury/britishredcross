@@ -1,12 +1,12 @@
 
 ## Challenge details
-Build a page that shows the available subscription plans to a user and allows them to choose what they’d like to purchase, the billing frequency and calculates the total cost for them.
-URL: https://gist.github.com/Tj-Stockopedia/11338d90eb3444c238b0fcb39a4b4be1
-
+Use HTML, CSS and JavaScript to retrieve data from an open API and display it
 ## Document Instruction - make it work on your machine
 In the project directory:
 
 Command line:
+
+in case, create database 'create database britishredcross;' in your mysql database...
 
 1. Node run:
 	node server.js
@@ -17,10 +17,12 @@ Command line:
 		{inserted 5 data records in the mysql database}
 
 3. Command line: New tab:
-	Cd stockopedia-app
+	Cd brc-app
 		yarn install
 		yarn start
 		
+if you have an issue with npm install (bug) - remove node_modules, package-lock and yarn.lock on root and app.
+        		
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 		
@@ -44,7 +46,7 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-cd stockopedia
+cd brc-app
 yarn run test
 
 Launches the test runner in the interactive watch mode.\
@@ -99,4 +101,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# stockopedia
+# britishredcross

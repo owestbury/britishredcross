@@ -17,8 +17,8 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
 const db = {};
 
 db.Sequelize = Sequelize;
-db.countries = require("./countries.model.js")(sequelize, Sequelize);
+db.galleries = require("./gallery.model.js")(sequelize, Sequelize);
 db.sequelize = sequelize;
-db.currency = require("./countries.model.js")(sequelize, Sequelize);
+db.currency = require("./gallery.model.js")(sequelize, Sequelize);
 
 module.exports = db;
