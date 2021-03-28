@@ -47,18 +47,14 @@ export class BillingCard extends Component {
 }
 
 BillingCard.propTypes = {
-    item: PropTypes.shape({
-        plan_code: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        annual_cost: PropTypes.number.isRequired,
-        monthly_cost: PropTypes.number.isRequired,
-        length: PropTypes.number
-    }),
+    item: PropTypes.array,
     val: PropTypes.string,
     currency: PropTypes.shape({
         code: PropTypes.string.isRequired,
         symbol: PropTypes.string.isRequired,
         rate: PropTypes.number.isRequired,
     }),
-    button: PropTypes.array
+    button: PropTypes.shape({
+        process: PropTypes.string,
+    })
 };
