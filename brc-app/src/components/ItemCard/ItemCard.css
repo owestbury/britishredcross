@@ -1,0 +1,47 @@
+.cardDeck {
+    width:50%;
+}
+
+.card {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+}
+
+.photo img {
+    border: 1px solid;
+    margin-right: 20px;
+    max-width:calc(90% - 20px);
+    box-sizing:border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    width: 100%;
+    display: grid;
+    padding: 5px;
+}
+
+.selected img.card-img-top {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+}
+
+@media only screen and (max-width: 578px) {
+    .card {
+        display: contents !important;
+        width: 100%;
+    }
+    img.card-img-top {
+        width: 50%;
+    }
+}
+
+
+

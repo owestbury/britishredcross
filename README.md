@@ -9,7 +9,7 @@ Command line:
 in case, create database 'create database britishredcross;' in your mysql database...
 
 1. Node run:
-	node server.js
+	root - node server.js
 
 2. Insert Data
 	Cd api

@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> 1 should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      <h2>
+        British Red Cross - Available subscription plans
+      </h2>
+    </header>
+    <h4>
+      Subscription
+    </h4>
+    <div
+      class="currency"
+    >
+      <div
+        class="dropdown"
+      >
+        <button
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="dropdown-toggle btn btn-success"
+          id="dropdown-basic"
+          type="button"
+        >
+          Currency
+        </button>
+      </div>
+      <div>
+        <pre>
+          <strong>
+            Rate:
+          </strong>
+           gb | £1
+        </pre>
+      </div>
+    </div>
+    <div
+      class="btn-group btn-group-toggle"
+      role="group"
+    >
+      <label
+        aria-label="Monthly"
+        class="btn btn-primary"
+      >
+        <input
+          autocomplete="off"
+          type="checkbox"
+          value="Monthly"
+        />
+        Monthly
+      </label>
+      <label
+        aria-label="Annual"
+        class="btn active btn-primary"
+      >
+        <input
+          autocomplete="off"
+          checked=""
+          type="checkbox"
+          value="Annual"
+        />
+        Annual
+      </label>
+    </div>
+    <div>
+      <div
+        class="card-deck"
+      />
+    </div>
+    <div
+      class="plansbox"
+    >
+      <div>
+        Please select any subscription
+      </div>
+      <div />
+    </div>
+  </div>
+</DocumentFragment>
+`;

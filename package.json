@@ -1,11 +1,11 @@
 {
-  "name": "stockopedia-app",
+  "name": "britishredcross",
   "version": "1.0.0",
-  "description": "stockopedia challenge nodejs, react, mysql, docker",
+  "description": "British red cross challenge nodejs, react, mysql, docker",
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "client": "cd stockopedia && yarn start",
+    "client": "cd ./britishredcross/brc-app && yarn start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn stockopedia-app"
   },
