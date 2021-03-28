@@ -10,7 +10,7 @@ const displayImage = (code) => {
 export class ItemCard extends Component {
     constructor(props) {
         super(props);
-        this.state = { isOpen: false };
+        this.state = {isOpen: false};
         this.timeOutId = null;
         this.onClickHandler = this.onClickHandler.bind(this);
         this.onBlurHandler = this.onBlurHandler.bind(this);
@@ -73,6 +73,10 @@ export class ItemCard extends Component {
                                 </ToggleButtonGroup>
                                 : null
                             }
+                        </div>
+                        <div className='button'
+                             onBlur={this.onBlurHandler}
+                             onFocus={this.onFocusHandler}>
                             {subscription === 1 && val === 'Annual' ?
                                 <ToggleButtonGroup type="checkbox" onChange={onChange} id='id' value={item}>
                                     <ToggleButton name='annual'
@@ -84,6 +88,10 @@ export class ItemCard extends Component {
                                 </ToggleButtonGroup>
                                 : null
                             }
+                        </div>
+                        <div className='button'
+                             onBlur={this.onBlurHandler}
+                             onFocus={this.onFocusHandler}>
                             {subscription === 2 ?
                                 <ToggleButtonGroup type="checkbox" onChange={onChange} id='id' value={item.id}>
                                     <ToggleButton name='remove'

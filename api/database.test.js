@@ -1,4 +1,5 @@
 import {afterAll, beforeAll, expect, test} from "@jest/globals";
+
 const db = require("./config/db.config.js");
 
 beforeAll(async () => {

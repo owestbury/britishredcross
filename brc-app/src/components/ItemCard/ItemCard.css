@@ -1,9 +1,8 @@
 .cardDeck {
-    width:50%;
+    cursor: pointer;
 }
 
 .card {
-    cursor: pointer;
     padding: 10px;
 }
 
@@ -15,8 +14,8 @@
 .photo img {
     border: 1px solid;
     margin-right: 20px;
-    max-width:calc(90% - 20px);
-    box-sizing:border-box;
+    max-width: calc(90% - 20px);
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     outline: 0;
@@ -39,6 +38,7 @@
         display: contents !important;
         width: 100%;
     }
+
     img.card-img-top {
         width: 50%;
     }

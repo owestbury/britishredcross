@@ -7,7 +7,7 @@ var con = mysql.createConnection({
     database: "britishredcross"
 });
 
-con.connect(function(err) {
+con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
     var sql = "INSERT INTO galleries (active, image, name, description, monthly_cost, annual_cost, link) VALUES ?";

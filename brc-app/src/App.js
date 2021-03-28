@@ -150,7 +150,7 @@ class App extends Component {
                         }
                     </CardDeck>
                 </div>
-                <div className="plansbox">
+                <div className="plansBox">
                     {this.state.SubSelected.length > 0 ?
                         <div className="selectedPlans">
                             <div className="selectedPlansTitle" aria-label={page.content_order}>
