@@ -10,7 +10,9 @@ const displayImage = (code) => {
 export class ItemCard extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = { isOpen: false };
+        this.timeOutId = null;
+        this.onClickHandler = this.onClickHandler.bind(this);
         this.onBlurHandler = this.onBlurHandler.bind(this);
         this.onFocusHandler = this.onFocusHandler.bind(this);
     }
@@ -61,22 +63,35 @@ export class ItemCard extends Component {
                              onBlur={this.onBlurHandler}
                              onFocus={this.onFocusHandler}>
                             {subscription === 1 && val === 'Monthly' ?
-                                <ToggleButtonGroup type="checkbox" onChange={onChange} onClick={this.onClickHandler} id='id' value={item}>
+                                <ToggleButtonGroup type="checkbox" onChange={onChange} id='id' value={item}>
                                     <ToggleButton name='monthly'
-                                                  value={0}>{button.monthly} {currency.symbol}{monthly_cost} </ToggleButton>
+                                                  onClick={this.onClickHandler}
+                                                  aria-haspopup="true"
+                                                  aria-expanded={this.state.isOpen}
+                                                  value={0}>
+                                        {button.monthly} {currency.symbol}{monthly_cost} </ToggleButton>
                                 </ToggleButtonGroup>
                                 : null
                             }
                             {subscription === 1 && val === 'Annual' ?
                                 <ToggleButtonGroup type="checkbox" onChange={onChange} id='id' value={item}>
                                     <ToggleButton name='annual'
-                                                  value={1}>{button.annual} {currency.symbol}{annual_cost}</ToggleButton>
+                                                  onClick={this.onClickHandler}
+                                                  aria-haspopup="true"
+                                                  aria-expanded={this.state.isOpen}
+                                                  value={1}>
+                                        {button.annual} {currency.symbol}{annual_cost}</ToggleButton>
                                 </ToggleButtonGroup>
                                 : null
                             }
                             {subscription === 2 ?
                                 <ToggleButtonGroup type="checkbox" onChange={onChange} id='id' value={item.id}>
-                                    <ToggleButton name='remove' variant="danger">{button.remove}</ToggleButton>
+                                    <ToggleButton name='remove'
+                                                  onClick={this.onClickHandler}
+                                                  aria-haspopup="true"
+                                                  aria-expanded={this.state.isOpen}
+                                                  variant="danger">
+                                        {button.remove}</ToggleButton>
                                 </ToggleButtonGroup>
                                 : null
                             }
