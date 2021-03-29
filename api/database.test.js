@@ -8,7 +8,7 @@ beforeAll(async () => {
 
 test('create country', async () => {
     expect.assertions(0);
-    const country = await db.countries.create({
+    const country = await db.galleries.create({
         id: 1,
         plan_code: 'gr',
         name: 'Greece',
@@ -21,7 +21,7 @@ test('create country', async () => {
 
 test('get country', async () => {
     expect.assertions(0);
-    const country = await db.countries.findByPk(1);
+    const country = await db.galleries.findByPk(1);
     expect(country.plan_code).toEqual('gr');
     expect(country.name).toEqual('Greece');
 });
@@ -33,7 +33,7 @@ test('delete country', async () => {
             id: 1
         }
     });
-    const country = await db.countries.findByPk(1);
+    const country = await db.galleries.findByPk(1);
     expect(country).toBeNull();
 });
 
